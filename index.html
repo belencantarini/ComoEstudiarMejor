@@ -14,12 +14,13 @@
 </head>
 <body>
     <div id="top"></div>
-    <header>
-        <div class="logo"><i class="fa fa-book fa-fw " aria-hidden="true"></i>Aprende a estudiar</div>
-        <nav>    
+    <header>        
+        <nav>
+            <input type="checkbox" id="nav-toogle">
+            <div class="logo"><i class="fa fa-book fa-fw " aria-hidden="true"></i>Aprende a estudiar</div>    
             <ul class="topnav">
                 <li><a href="#top">Inicio</a></li>
-                <li><a href="#secciones">Secciones<i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
+                <li><a>Secciones<i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
                     <ul class="dropdown">
                         <li><a href="#comprender">Comprender</a></li>
                         <li><a href="#memorizar">Memorizar</a></li>
@@ -29,6 +30,13 @@
                 <li><a href="#recomendaciones">Recomendaciones</a></li>
                 <li><a href="#contacto">Contactanos</a></li>
             </ul>
+            <label for="nav-toogle" class="label-toogle">
+                <div class="nav-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </label>
         </nav>
     </header>
     <main>
@@ -245,11 +253,11 @@
                                 <button>Consiguelo</button>
                             </div>
                         </div>
-                    </div>
-                    <div class="slides-navigation">
-                        <label for="slide-recommendation1" class="bar"></label>
-                        <label for="slide-recommendation2" class="bar"></label>
-                        <label for="slide-recommendation3" class="bar"></label>
+                        <div class="slides-navigation">
+                            <label for="slide-recommendation1" class="bar"></label>
+                            <label for="slide-recommendation2" class="bar"></label>
+                            <label for="slide-recommendation3" class="bar"></label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -258,17 +266,19 @@
         <section>
             <h2 class="title-section">Contactanos</h2> 
             <div class="form-container">
-                <div>Imagen</div>
-                <div class="formulario" id="contacto">
-                    <div>Por cualquier consulta o sugerencia, por favor contactese con nosotros mediante nuestro formulario de contacto o nuestras redes sociales.</div>
-                    <form id="submit-form" action="">
-                        <div>
-                            <input id="name" type="text" placeholder="Ingrese su nombre.">
-                            <input id="email" type="email" placeholder="Ingrese su email.">
-                        </div>
-                        <textarea id="message" cols="70" rows="5" placeholder="Ingrese su mensaje."></textarea>
-                        <input type="submit" class="submit-btn" value="Enviar"></input>
-                    </form>
+                <img src="https://cdn.pixabay.com/photo/2018/08/10/15/39/email-3597088_960_720.jpg" alt="Contactanos">
+                <div class="formulario">    
+                    <div id="contacto">
+                        <div>Por cualquier consulta o sugerencia, por favor contactese con nosotros mediante nuestro formulario de contacto o nuestras redes sociales.</div>
+                        <form id="submit-form" action="">
+                            <div>
+                                <input id="name" type="text" placeholder="Ingrese su nombre.">
+                                <input id="email" type="email" placeholder="Ingrese su email.">
+                            </div>
+                            <textarea id="message" placeholder="Ingrese su mensaje."></textarea>
+                            <input type="submit" class="submit-btn" value="Enviar"></input>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -280,12 +290,12 @@
         <div>
             <div class="logo"><i class="fa fa-book fa-fw " aria-hidden="true"></i>Aprende a estudiar</div>
             <ul class="mediaicons">
-                <li><a href="https://www.facebook.com/beluCE0p" target="_blank"><i class="fab fa-facebook-f fa-1x" aria-hidden="true"></i>Facebook</a></li>
-                <li><a href="https://www.instagram.com/belucanta/" target="_blank"><i class="fab fa-instagram fa-1x" aria-hidden="true"></i>Instagram</a></li>
-                <li><a href="https://twitter.com/BelenCE5" target="_blank"><i class="fab fa-twitter fa-1x" aria-hidden="true"></i>Twitter</a></li>
-                <li><a href="https://www.linkedin.com/in/belen-cantarini-9bab34124/" target="_blank"><i class="fab fa-linkedin-in fa-1x" aria-hidden="true"></i>LinkedIn</a></li>
-                <li><a href="mailto:belencantarini@gmail.com"><i class="fa fa-envelope fa-1x" aria-hidden="true"></i>Gmail</a></li>
-                <li><a href="https://api.whatsapp.com/send?phone=5491155086946&text=Hola!%20Vi%20tu%20sitio%20web%20sobre%20métodos%20de%20estudio%20y%20quisiera%20saber%20más!" target="_blank"><i class="fab fa-whatsapp fa-1x" aria-hidden="true"></i>WhatsApp</a></li>
+                <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f fa-1x" aria-hidden="true"></i><p>Facebook</p></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-1x" aria-hidden="true"></i><p>Instagram</p></a></li>
+                <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-1x" aria-hidden="true"></i><p>Twitter</p></a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in fa-1x" aria-hidden="true"></i><p>LinkedIn</p></a></li>
+                <li><a href="mailto:belencantarini@gmail.com"><i class="fa fa-envelope fa-1x" aria-hidden="true"></i><p>Gmail</p></a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=5491155086946&text=Hola!%20Vi%20tu%20sitio%20web%20sobre%20métodos%20de%20estudio%20y%20quisiera%20saber%20más!" target="_blank"><i class="fab fa-whatsapp fa-1x" aria-hidden="true"></i><p>WhatsApp</p></a></li>
             </ul>
         </div>
         <div class="copyright">
@@ -301,6 +311,7 @@
 <!-- Como el psycopass web https://silly-euclid-e8c861.netlify.app/index.html poner una imagen de fondo a la que se le sube cada parte de comprender (laberinto), memorizar (notas en una mesa) y concentrarse (reloj)-->
 <!-- Navbar https://www.youtube.com/watch?v=nKnrdABs7Zs&t=2s -->
 <!-- Dropdown menu https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+<!-- Navigation toogle https://codepen.io/fabran99/pen/rReeJE -->
 <!-- Cards hover effect https://www.youtube.com/watch?v=KaPBvpy56ig -->
 <!-- Cards hover pile effect https://www.youtube.com/watch?v=VFMID2hgmgM -->
 <!-- Other cards hover https://blog.avada.io/css/card-hover-effects#ec-card-hover-jorge-sanes -->
